@@ -25,7 +25,6 @@ export class DashboardComponent implements OnInit {
     this.http.get('http://localhost:3000/campanha').subscribe(
 	  	res => {
 	  	  this.campanhas = res;
-        console.log(this.campanhas, 'xxxxxxxxxx');
 			}
 		);
 
