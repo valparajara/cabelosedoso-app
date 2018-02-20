@@ -13,28 +13,17 @@
                                     <th>Titulo</th>
                                     <th>Itens</th>
                                     <th>Status</th>
-                                    <th>Relatório</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Campanha 1</td>
-                                    <td>#item1, #item2, #item3</td>
-                                    <td>Inativa - Botão para alterar o status</td>
-                                    <td class="text-danger">Botão para aparecer um modal</td>
+                                <tr ng-repeat="let campanha of campanhas">
+                                    <td>{{ campanha.nome }}</td>
+                                    <td>{{ campanha.itens }}</td>
+                                    <td>{{ campanha.ativo }}</td>
+                                    <button class="btn btn-danger pull-right">Relatório</button>
                                 </tr>
-                                <tr>
-                                    <td>Campanha 2</td>
-                                    <td>#item1, #item2, #item3</td>
-                                    <td>Inativa - BOTÃO PARA ALTERAR O STATUS</td>
-                                    <td class="text-danger">Botão para aparecer um modal</td>
-                                </tr>
-                                 <tr>
-                                    <td>Campanha 3</td>
-                                    <td>#item1, #item2, #item3, #item4</td>
-                                    <td>Ativa</td>
-                                    <td class="text-danger">Levar para página Dashboard</td>
-                                </tr>
+                               
                             </tbody>
                         </table>
                     </div>

@@ -5,8 +5,9 @@
           <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="card" >
-                        <div class="card-header" data-background-color="orange">
-                            <h4 class="title">Titulo Campanha 1</h4>
+                      <ng-container *ngFor="let campanha of campanhas">
+                        <div class="card-header" data-background-color="orange" >
+                            <h4 class="title">{{campanha.campanha}}</h4>
                             <p class="category"></p>
                         </div>
                         <div class="card-content table-responsive">
@@ -15,28 +16,19 @@
                                     <tr>
                                         <th></th>
                                         <th>Item</th>
-                                        <th>Voto</th>
+                                        <th>Quant. de Votos</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>#item1</td>
-                                        <td>458</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>#item2</td>
-                                        <td>729</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>#item3</td>
-                                        <td>561</td>
-                                    </tr>
+                                        <tr *ngFor="let iten of campanha.itens">
+                                            <td></td>
+                                            <td>{{iten}}</td>
+                                            <td>458</td>
+                                        </tr>
                                 </tbody>
                             </table>
                         </div>
+                      </ng-container>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-6">
@@ -70,7 +62,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="stats">
-                                <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                <i class="material-icons">access_time</i>
                             </div>
                         </div>
                     </div>
