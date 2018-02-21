@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './nova-campanha.component.html',
   styleUrls: ['./nova-campanha.component.css']
 })
+
 export class NovaCampanhaComponent implements OnInit {
 
 	public items: string[] = [];
@@ -26,13 +27,12 @@ export class NovaCampanhaComponent implements OnInit {
 
   doCreate() {
   	this.http.post('http://localhost:3000/campanha', {
-  		//campanha: this.campanha,
+  		campanha: this.campanha,
   		itens: this.items
   	}).subscribe(
   		res => {
 
   		}
   	);
-  	console.log('cccc');
   }
 }
